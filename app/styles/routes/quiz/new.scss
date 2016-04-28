@@ -1,0 +1,18 @@
+div.new-container{
+	flex: 1;
+	margin-top: 50px;
+}
+
+input.proceed-input {
+	@extend .default-text;
+	@extend .middle-self;
+	text-align: center;
+	background: $faded-two;
+	border: none;
+	height: 50px;
+	width: 70%;
+	&:focus{
+		outline: none;
+	}
+	margin-bottom: 40px;
+}

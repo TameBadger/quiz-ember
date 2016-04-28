@@ -1,0 +1,39 @@
+li.quiz-item{
+	@extend .flex-row;
+	margin: 5px 10px;
+	background-color: $faded-two;
+	div{
+		display: flex;
+		justify-content: flex-start;
+		align-items: center;
+		flex: 1;
+		font-family: $pathWay;
+		margin-left: 5px;
+	}
+	button {
+		display: flex;
+		justify-content: flex-end;
+		$buttonSize: 50px;
+		width: $buttonSize;
+		height: $buttonSize;
+		min-width: $buttonSize;
+		min-height: $buttonSize;
+		border-radius: 50%;
+		background: none;
+		border-style: dashed;
+		border-color: #fff;
+		border-width: 1px;
+		&:focus {
+			outline: 0;
+			box-shadow: none;
+		}
+	}
+}
+li.selected{
+	button {
+		background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAGAAAABgCAYAAADimHc4AAACpUlEQVR4Xu2b7VHDMBBE7yqAUiiBTiAlUBHpBEqgFKjAjBl7xnhiRx8nrXTa/Ja98XtaxRo7KvxACSg0neFCAeBJQAEUACYAjmcDKABMABzPBlAAmAA4ng2gADABcDwbQAFgAuB4NoACwATA8WwABYAJgOPZAAoAEwDHswEUACYAjmcDIgVM0/QkIi+q+hZ56M3hFBBBcYH/ISKPInJV1UvE4RSQA2sHfz1VtgQ2IMDKAXwTCRRwR8Ad+NkSKOBEQCD8LAkUcCAgEv58louqXgNWtH9DKOAGsVrw52gK2AmoCZ8CwPApYCOg9sxfo7kEiQgKPhsAhj+8AOTMH34JagH+sA1oBf6QAlqCP5yA1uAPJaBF+MMIaBX+EAJahu9eQOvwXQvoAb5bAb3ANxUwTdPr3wkTngrFPkU6G98TfDMBC/z3BUzSozkLCb3BNxGwg79yrC6hR/jZAg7gV5fQK/wsAXfgV5PQM/xkAYHwi0voHX6OgPkN4U8ReQj88TT/TfAAP1nAfOACACLBC/wsASgJnuBnC6gtwRt8EwG1JHiEbyagtASv8E0FlJLgGb65AGsJ3uEXEWAlYQT4xQTkShgFflEBqRJE5EtE1r+Chmy0zXfZIaFWY4q/HZ2wY/5e/ocbco1dwy/egJVggoQh4FcTkLgcnUnofuavF1d8CdpSNGqCG/hVG2C0HLmCDxGQsRy5gw8TkCDBJXyogAgJbuHDBQRIcA2/CQEHEn5E5FlV512x60/V29Azkptb1HnYEPCbacDuFnV+v9T9zIdsxFyvJYkX18wSlPj9uz+MAsAKKYACwATA8WwABYAJgOPZAAoAEwDHswEUACYAjmcDKABMABzPBlAAmAA4ng2gADABcDwbQAFgAuB4NoACwATA8WwAWMAvhaBacC23o/0AAAAASUVORK5CYII=);
+		background-position: center;
+		background-size: contain;
+	}
+	background-color: $kindBlue;
+}

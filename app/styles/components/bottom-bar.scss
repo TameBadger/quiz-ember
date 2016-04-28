@@ -1,0 +1,11 @@
+footer{
+	background-color: $kindBlue;
+	height: $dimension;
+	button {
+		border: none;
+		background: none;
+		width: 100%;
+		height: 100%;
+		@extend .default-text;
+	}
+}

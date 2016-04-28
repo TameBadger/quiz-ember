@@ -1,0 +1,3 @@
+{{#each quizzer.currentQuestion.statements as |statement| }}
+	{{quiz-item statement=statement title=statement.title answer=quizzer.answer}}
+{{/each}}

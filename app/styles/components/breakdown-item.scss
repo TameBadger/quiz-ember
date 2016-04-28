@@ -1,0 +1,38 @@
+li.breakdown-item{
+	@extend .flex-row;
+	margin: 5px 10px;
+	padding: 5px;
+	border-radius: 0 35px 35px 0;
+	justify-content: space-between;
+	.breakdown-title{
+		@extend .flex-center-all;
+		font-family: $pathWay;
+	}
+	.breakdown-score{
+		$blockSize: 40px;
+		@extend .flex-center-all;
+		width: $blockSize;
+		height: $blockSize;
+		min-width: $blockSize;
+		min-height: $blockSize;
+		border-radius: 50%;
+		background-color: $faded-one;
+		font-size: 20px;
+		font-family: $pathWay;
+	}
+	&.color-A{
+		background-color: #5AD3F2;
+	}
+	&.color-B{
+		background-color: #56DE92;
+	}
+	&.color-C{
+		background-color: #F25999;
+	}
+	&.color-D{
+		background-color: #FFB54C;
+	}
+	&.color-E{
+		background-color: #A14EBF;
+	}
+}

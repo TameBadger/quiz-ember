@@ -1,0 +1,9 @@
+{{breakdown-list 
+	breakdowns=quizzer.scoresByOptions 
+	maxScore=quizzer.maxScore
+	viewDetail=(action 'goTo')
+}}
+
+{{#bottom-bar}}
+	<button {{action 'done'}}>Done</button>
+{{/bottom-bar}}

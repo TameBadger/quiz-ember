@@ -1,0 +1,25 @@
+ember: &defaults
+ image: custom/embercli:0.1
+ volumes:
+   - .:/myapp
+
+npm:
+ <<: *defaults
+ entrypoint: ['/usr/local/bin/npm']
+
+eslint:
+ <<: *defaults
+ entrypoint: ['/usr/local/bin/eslint']
+
+bower:
+ <<: *defaults
+ entrypoint: ['/usr/local/bin/bower', '--allow-root']
+
+server:
+ <<: *defaults
+ command: server --watcher polling
+ ports:
+   - "4200:4200"
+   - "35729:35729"
+   - "49152:49152"
+   - "7357:7357"

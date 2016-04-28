@@ -1,0 +1,23 @@
+.left-panel {
+	min-width: 120px;
+	margin: 5px;
+}
+
+.right-panel {
+	margin: 0 10px;
+	h1 {
+	  margin: 15px 0 10px 0;
+	  font-family: $satisfy;
+	  font-size: 1.8em;
+	  color: $faded-white;
+	}
+	p {
+	  font-family: $pathWay;
+	  font-size: 1.3em;
+	  color: $faded-white;
+	}
+}
+
+img.love-language-result{
+	max-width: 100%;
+}

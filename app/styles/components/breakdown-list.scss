@@ -1,0 +1,40 @@
+ul.breakdown-list{
+	margin-left: -10px;
+	flex: 1;
+	li{
+		transition: width 1s, height 1s, background-color 1s, transform 1s;
+	}
+}
+
+$startWidth: 30%;
+
+ul.max-0 {
+	li {
+		width: $startWidth;
+	}
+}
+
+@for $i from 0 through 5 {
+	$incr: 12%;
+	ul.max-5{
+		li.score-#{$i} { width: $startWidth + ($i * $incr); }
+	}
+}
+@for $i from 0 through 10 {
+	$incr: 6%;
+	ul.max-10{
+		li.score-#{$i} { width: $startWidth + ($i * $incr); }
+	}
+}
+@for $i from 0 through 15 {
+	$incr: 4%;
+	ul.max-15{
+		li.score-#{$i} { width: $startWidth + ($i * $incr); }
+	}
+}
+@for $i from 0 through 20 {
+	$incr: 3%;
+	ul.max-20{
+		li.score-#{$i} { width: $startWidth + ($i * $incr); }
+	}
+}

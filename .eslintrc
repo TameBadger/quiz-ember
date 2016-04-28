@@ -1,0 +1,13 @@
+{
+  "extends": "ember",
+  "rules": {
+  	"semi": [2, "never"],
+  	"object-curly-spacing": ["error", "always"],
+  	"newline-after-var": "off",
+  	"newline-before-return": "off",
+  	"arrow-body-style": "off",
+  	"no-magic-numbers": "off",
+  	"array-callback-return": "off",
+    "no-else-return": "off"
+  }
+}

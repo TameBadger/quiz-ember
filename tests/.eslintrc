@@ -1,0 +1,10 @@
+{
+  "extends": "ember",
+  "rules": {
+    "no-console": 0,
+    "object-curly-spacing": ["error", "always"],
+  	"newline-after-var": "off",
+  	"newline-before-return": "off",
+  	"newline-per-chained-call": "off"
+  }
+}

@@ -1,0 +1,55 @@
+@import 'reset';
+
+@import url(http://fonts.googleapis.com/css?family=Satisfy|Pathway+Gothic+One);
+
+$moodyBlue: #18293A;
+$bruisedBlue: #253A4D;
+$kindBlue: #4196E9;
+
+$white: #fff;
+$faded-white: rgba(255,255,255,0.8);
+$faded-one: rgba(0,0,0,0.1);
+$faded-two: rgba(0,0,0,0.2);
+
+$pathWay: 'Pathway Gothic One', 'sans-serif';
+$satisfy: 'Satisfy', 'cursive';
+
+$dimension: 60px;
+
+body {
+  background: $bruisedBlue;
+}
+
+.container {
+	@extend .flex-column;
+	min-height: 100vh;
+	nav {
+		//more in components/nav-bar.scss
+    position: fixed;
+    width: 100%;
+	}
+	section {
+    @extend .flex-column;
+		flex: 1;
+    margin-top: 100px;
+	}
+}
+
+@import 'utils';
+
+@import 'default';
+
+@import 'shared/menu-list';
+
+@import 'routes/error';
+@import 'routes/loading';
+@import 'routes/quiz/lovelanguages';
+@import 'routes/quiz/new';
+@import 'routes/lovelanguage';
+
+@import 'components/nav-bar';
+@import 'components/quiz-list';
+@import 'components/quiz-item';
+@import 'components/breakdown-list';
+@import 'components/breakdown-item';
+@import 'components/bottom-bar';

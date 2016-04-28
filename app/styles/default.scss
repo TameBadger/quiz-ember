@@ -1,0 +1,30 @@
+h1, a {
+  font-family: $pathWay;
+}
+
+h2, p {
+  font-family: $satisfy;
+}
+
+h1 { font-size: 2em; }
+
+h2 { font-size: 2.5em; }
+
+a { font-size: 1.5em; }
+
+p { font-size: 1.6em; }
+
+li, p, a, div, h1, h2 {
+	color: $white;
+}
+
+.default-text{
+  color: $white;
+  font-family: $pathWay;
+  font-size: 1.5em;
+}
+
+*::-webkit-input-placeholder {
+    color: rgba(255,255,255, 0.2);
+    text-align: center;
+}
