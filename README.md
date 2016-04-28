@@ -1,8 +1,8 @@
 # Quiz Me
 
-A simple app, where you can take a quiz based on a pair of statements on a topic. The topic at this moment is static, and mostly a replica of one of the profiles found on the 5 Love Languages [website](http://www.5lovelanguages.com).
+A simple app, where you can take a quiz based on a pair of statements on a topic. The topic at this moment is static, and mostly a replica of one of the profiles found on the [5 Love Languages website](http://www.5lovelanguages.com).
 You'll get a breakdown of the result on completing the quizz, and can access this result again later.
-I experimented with [device fingerprints](https://en.wikipedia.org/wiki/Device_fingerprint), as a method of identifying a user and storing their results against their fingerprint.
+I experimented with [device fingerprinting](https://en.wikipedia.org/wiki/Device_fingerprint), as a method of identifying a user and storing their results against their device fingerprint.
 
 ## Ember CLI in a jiffy
 
@@ -57,10 +57,10 @@ Specify what it takes to deploy your app.
   * [ember inspector for firefox](https://addons.mozilla.org/en-US/firefox/addon/ember-inspector/)
 
 ## Roadmap / TODOS
-Fix failing acceptance tests related to posting a record to mirage.
-Add a variation of the docker image that includes ESLint.
-Implement settings menu for toggling auto-save.
-Make the quiz topic more dynamic.
-Add more tests.
-Add [ember-cordova](https://github.com/isleofcode/ember-cordova).
-Investigate [ember-cordova](https://github.com/isleofcode/ember-cordova) features for swapping platform specific templates/styles.
+* Fix failing acceptance tests related to posting a record to mirage.
+* Add a variation of the docker image that includes ESLint.
+* Implement settings menu for toggling auto-save.
+* Make the quiz topic more dynamic.
+* Add more tests.
+* Add [ember-cordova](https://github.com/isleofcode/ember-cordova).
+* Investigate [ember-cordova](https://github.com/isleofcode/ember-cordova) features for swapping platform specific templates/styles.
