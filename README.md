@@ -1,5 +1,8 @@
 # Quiz Me
 
+[![Build Status](https://travis-ci.org/TameBadger/quiz-ember.svg?branch=master)](https://travis-ci.org/TameBadger/quiz-ember)
+
+
 A simple app, where you can take a quiz based on a pair of statements on a topic. The topic at this moment is static, and mostly a replica of one of the profiles found on the [5 Love Languages website](http://www.5lovelanguages.com).
 You'll get a breakdown of the result on completing the quizz, and can access this result again later.
 I experimented with [device fingerprinting](https://en.wikipedia.org/wiki/Device_fingerprint), as a method of identifying a user and storing their results against their device fingerprint.
