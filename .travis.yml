@@ -20,3 +20,9 @@ install:
 
 script:
   - npm test
+  - bash ./deploy.sh
+
+env:
+  global:
+  - ENCRYPTION_LABEL: "0798a31e1b4b"
+  - COMMIT_AUTHOR_EMAIL: "rupertklopper@yahoo.com"
