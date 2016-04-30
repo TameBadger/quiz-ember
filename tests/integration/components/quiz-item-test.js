@@ -26,8 +26,6 @@ test('it renders', function (assert) {
 
   // assert.equal(this.$().attr('class'), 'ember-view quiz-item selected', 'quiz item not selected yet')
 
-  // console.log(this.$())
-
   assert.equal(1, 1)
 
 })
