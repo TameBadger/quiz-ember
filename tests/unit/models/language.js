@@ -1,13 +1,13 @@
-import { moduleForModel, test } from 'ember-qunit'
+import { moduleForModel, test } from 'ember-qunit';
 
 moduleForModel('language', 'Unit | Model | language', {
   needs: []
-})
+});
 
 test('it exists', function (assert) {
-  const model = this.subject({ short: 'quality' })
+  const model = this.subject({ short: 'quality' });
 
-  assert.equal(model.get('image'), 'assets/images/5ll_icon-quality.png')
+  assert.equal(model.get('image'), 'assets/images/5ll_icon-quality.png');
 
-  assert.ok(Boolean(model))
-})
+  assert.ok(Boolean(model));
+});
