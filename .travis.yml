@@ -1,28 +1,29 @@
----
 language: node_js
 node_js:
-  - "4"
-
+- '4'
 sudo: false
-
 cache:
   directories:
-    - node_modules
-
+  - node_modules
 before_install:
-  - npm config set spin false
-  - npm install -g bower
-  - npm install phantomjs-prebuilt
-
+- npm config set spin false
+- npm install -g bower
+- npm install phantomjs-prebuilt
 install:
-  - npm install
-  - bower install
-
+- npm install
+- bower install
 script:
-  - npm test
-  - bash ./deploy.sh
-
+- npm test
+- bash ./deploy.sh
+deploy:
+  provider: s3
+  access_key_id: $AWS_ACCESS_KEY_ID
+  secret_access_key: $AWS_SECRET_ACCESS_KEY
+  bucket: "quiz-ember"
+  local_dir: out
 env:
   global:
-  - ENCRYPTION_LABEL: "0798a31e1b4b"
-  - COMMIT_AUTHOR_EMAIL: "rupertklopper@yahoo.com"
+  - ENCRYPTION_LABEL: 0798a31e1b4b
+  - COMMIT_AUTHOR_EMAIL: rupertklopper@yahoo.com
+  - AWS_ACCESS_KEY_ID: j42vN0UVo2U8UCbjV15TONyc6ZfKbZ77oZkhglV6m52fcJSVjQz2zUyBu0D7Y1PljHFeXU7SFGyRsIibyaZsEVWShu7ML3BpTkcDsKDWEpwHyzg4vr3tclD+KEK8CDDz3N9TceWfMGEvnmu6t5RV7eXlQWAbSH2B8JavFBShJPIKZJfO5GJwSWgntqIgwsTivdhBE73uskOmjp7+WcmaIDpmWcHetBfWDMXedmlLvDXbJGJRKFjmUdK7FC1kgbD0mhk0Ec6g2r4ICS2ntuqDk0fxx4fuQnRXk39nSU4U9tpK3XZHLTse0K7eRq9LtWf0a6woIxrBqCEcIBugxLnnJGEFagpXslNqBy/W/hFln9t5zLzrp5uNIG5KiOnzn2rbPim0SMW0/P8o3dRdp4Yme9vIE68A8h64YAy9rLdu64aSFCLAyXVrQx0eLYjSgcqNcQlBpJ3cX8PQokPT0Q0cZaWmXjnhkiCmhoMnqivWMweNQZTeAUz2wFaOA1DPmYSgq8JNQrKgy0ISgrEZMwxOZhLxry4CkRlUR917i1MS0OwWCadaICgOlbFn73hzbeGVDntE/F8LYewpywg35hQOsGTAzDVVYCBaj/7/g4zX0Yk0U07TiZlHvmq8OoG/Gth1HdHqHnNUOlm94/5iN2lfH7XMRYhh5pJ1WOnNpv0DZlM=
+  - AWS_SECRET_ACCESS_KEY: oSusI3riYruIOTTRPMOqdmMQpuchQa/7ITheotUE5KB+aZN8ZBvpzcYU1LMdxQkwFjNp+9UNeaojtaLiJiKoTrclCMdbLT0YKZeho5x9G9snfhaFdIAffq59eJNX9FdneP7dOZTjhUQI94MXf8Y4AVujQBq/5tfk5YYD/Xv0YO45eVKyWelP8TEyFK+DZNGaugEqetyxkkpcRbmQFjJe7KP44nMcckN3Bf8oUcJULvXnSxdbxQRRMYZFM7rByKvbFjOmz88cnINaz1kD8Tp/yYAsIHGnsj/QlWJiodX0IYKyoRti3C/Dm7mjaV5qS6b5vPa+3810iNVJ26rUJr9NkcyC9vbw6e0/jANNCmHvlasXU+wfGCCrXEZNA2evpWn7ihlPSbGZRGo7uWRutGqgwstr5vGo3hA/72vdcWPekybgeFgJ80E8qUKb9s4clFbQsKovEfnGM+R5sjr2jWz+xHjvi60htEQ6iNmMfe8+g3GJqne43R9kpkGE8twV4CDqJEU5kM9toXxyeDwqkRfFUcGqPqNd2LxBjGamPkZDYuOi2LikVeychbLWsxIiEHFpPb93pqFH73cL/pEeUmySB5E/1ruDCHI3YWtS3575DLd5cEOqLBAmDYmN3ZEj1DCKlKcZu3YOmMjbdAdFf1tkf7AZ8oROHVpnSnyI4IWsMqY=
