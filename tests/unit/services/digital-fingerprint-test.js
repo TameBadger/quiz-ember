@@ -1,13 +1,21 @@
 import { moduleFor, test } from 'ember-qunit'
+import startMirage from '../../helpers/setup-mirage-for-integration'
 
-moduleFor('service:digital-fingerprint', 'Unit | Service | digital fingerprint', {
-  // Specify the other units that are required for this test.
-  needs: ['model:digital-fingerprint', 'model:statement']
+moduleFor('service:digital-fingerprint', 'Unit | Service | digital-fingerprint', {
+
+  needs: ['model:language', 'model:digital-fingerprint', 'model:statement'],
+
+  beforeEach() {
+    startMirage(this.container)
+  },
+
+  afterEach() {
+    window.server.shutdown()
+  }
 })
 
-// Replace this with your real tests.
-test('it exists', function (assert) {
+test('initializes correctly', function (assert) {
   // const service = this.subject()
   // assert.ok(service)
-  assert.ok(true)
+  assert.ok(true, 'Ember testing issue')
 })
