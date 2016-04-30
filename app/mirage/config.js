@@ -1,6 +1,8 @@
 /* eslint no-console: "off" */
 
-// import { postDigitalFingerprint } from './methods/post'
+import Ember from 'ember'
+
+import { postDigitalFingerprint, postLanguage, postStatement } from './methods/post'
 import { pair, language, statement } from './methods/get_single'
 import { pairs, languages, statements } from './methods/get_all'
 
@@ -22,9 +24,13 @@ export default function () {
 
   this.passthrough('/digital-fingerprints')
 
-  // this.post('/digital-fingerprints', function (db, request) {
-  //   return Ember.run.bind(this, postDigitalFingerprint)(db, request)
-  // })
+  this.post('/languages', postLanguage)
+
+  this.post('/statements', postStatement)
+
+  this.post('/digital-fingerprints', function (db, request) {
+    return Ember.run.bind(this, postDigitalFingerprint)(db, request)
+  })
 
 }
 
@@ -44,14 +50,12 @@ export function testConfig() {
 
   this.get('/pairs/:id', pair)
 
-  // this.post('/statements', function (db, request) {
-  //   return JSON.parse(request.requestBody)
-  // })
+  this.post('/languages', postLanguage)
 
-  // this.post('/digital-fingerprints', function (db, request) {
-  //   return Ember.run.bind(this, postDigitalFingerprint)(db, request)
-  // })
+  this.post('/statements', postStatement)
 
-  // this.post('/digital-fingerprints', postDigitalFingerprint)
+  this.post('/digital-fingerprints', function (db, request) {
+    return Ember.run.bind(this, postDigitalFingerprint)(db, request)
+  })
 
 }

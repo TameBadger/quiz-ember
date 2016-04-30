@@ -2,7 +2,7 @@
   "extends": "ember",
   "rules": {
   	"semi": [2, "never"],
-  	"object-curly-spacing": ["error", "always"],
+  	"object-curly-spacing": 0,
   	"newline-after-var": "off",
   	"newline-before-return": "off",
   	"arrow-body-style": "off",
