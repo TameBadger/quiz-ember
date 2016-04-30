@@ -18,17 +18,16 @@ REPO=`git config remote.origin.url`
 SSH_REPO=${REPO/https:\/\/github.com\//git@github.com:}
 SHA=`git rev-parse --verify HEAD`
 
-mkdir out
-
-doCompile
-
+git clone $REPO out
 cd out
-
-pwd
-
-git init
-git config user.name "Travis CI"
-git config user.email "$COMMIT_AUTHOR_EMAIL"
+git checkout $TARGET_BRANCH || git checkout --orphan $TARGET_BRANCH
+git branch
+cd ..
+git branch
+rm -rf out/**/* || exit 0
+ember build --environment production --output-path out
+cd out
+git branch
 git add index.html
 git add assets
 git commit -m "Deploy to GitHub Pages: ${SHA}"
