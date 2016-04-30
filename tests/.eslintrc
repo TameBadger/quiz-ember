@@ -5,6 +5,8 @@
     "object-curly-spacing": ["error", "always"],
   	"newline-after-var": "off",
   	"newline-before-return": "off",
-  	"newline-per-chained-call": "off"
+  	"newline-per-chained-call": "off",
+  	"no-magic-numbers": "off",
+  	"no-undef": "off"
   }
 }
