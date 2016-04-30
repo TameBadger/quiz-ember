@@ -25,9 +25,7 @@ echo $SSH_REPO
 git clone $REPO out
 cd out
 git checkout $TARGET_BRANCH || git checkout --orphan $TARGET_BRANCH
-ls -1 | wc -l
 cd ..
-ls -1 | wc -l
 
 # Clean out existing contents
 rm -rf out/**/* || exit 0
@@ -37,8 +35,6 @@ doCompile
 
 # Now let's go have some fun with the cloned repo
 cd out
-ls -1 | wc -l
-ls -l
 git config user.name "Travis CI"
 git config user.email "$COMMIT_AUTHOR_EMAIL"
 
@@ -61,9 +57,9 @@ ENCRYPTED_KEY=${!ENCRYPTED_KEY_VAR}
 ENCRYPTED_IV=${!ENCRYPTED_IV_VAR}
 openssl aes-256-cbc -K $ENCRYPTED_KEY -iv $ENCRYPTED_IV -in ../dep_key.enc -out dep_key -d
 
-#check size to ensure it is indeed in this directory
-stat --printf="%s" dep_key
-ls -l
+git diff
+git status
+git show-ref
 
 chmod 600 dep_key
 eval `ssh-agent -s`
