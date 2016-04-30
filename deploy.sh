@@ -18,8 +18,20 @@ REPO=`git config remote.origin.url`
 SSH_REPO=${REPO/https:\/\/github.com\//git@github.com:}
 SHA=`git rev-parse --verify HEAD`
 
+echo $SSH_REPO
+
+ls -1 | wc -l
+
 git clone --quiet --branch=gh-pages $REPO out
+
+ls -1 | wc -l
+
+pwd
+
 cd out 
+
+pwd
+
 git status
 git branch
 
@@ -27,10 +39,19 @@ cd ..
 
 doCompile
 
+pwd
+
 cd out
 
+pwd
+
+echo "Checking git status"
 git status
+
+echo "Checking git branch"
 git branch
+
+echo "exiting"
 
 exit 0
 
