@@ -53,38 +53,37 @@ git branch
 git show-ref
 echo "==="
 
-exit 1
+echo "Ember build started"
+ember build -prod
+cp dist/index.html out/
+cp dist/assets out/ -r
+echo "Ember build ended"
 
-# echo "Ember build started"
-# ember build --environment production --output-path out
-# echo "Ember build ended"
+cd out
+echo "Changed Directory to out"
+git branch
+git show-ref
+echo "==="
 
+git config user.name "Travis CI"
+git config user.email "$COMMIT_AUTHOR_EMAIL"
+git add index.html
+git add assets
+git commit -m "Deploy to GitHub Pages: ${SHA}"
 
-# cd out
-# echo "Changed Directory to out"
-# git branch
+ENCRYPTED_KEY_VAR="encrypted_${ENCRYPTION_LABEL}_key"
+ENCRYPTED_IV_VAR="encrypted_${ENCRYPTION_LABEL}_iv"
+ENCRYPTED_KEY=${!ENCRYPTED_KEY_VAR}
+ENCRYPTED_IV=${!ENCRYPTED_IV_VAR}
+openssl aes-256-cbc -K $ENCRYPTED_KEY -iv $ENCRYPTED_IV -in ../dep_key.enc -out dep_key -d
 
-# git config user.name "Travis CI"
-# git config user.email "$COMMIT_AUTHOR_EMAIL"
+echo "Check state for the last time"
+git branch
+git show-ref
+echo "==="
 
-# git add index.html
-# git add assets
+chmod 600 dep_key
+eval `ssh-agent -s`
+ssh-add dep_key
 
-# git commit -m "Deploy to GitHub Pages: ${SHA}"
-
-# ENCRYPTED_KEY_VAR="encrypted_${ENCRYPTION_LABEL}_key"
-# ENCRYPTED_IV_VAR="encrypted_${ENCRYPTION_LABEL}_iv"
-# ENCRYPTED_KEY=${!ENCRYPTED_KEY_VAR}
-# ENCRYPTED_IV=${!ENCRYPTED_IV_VAR}
-# openssl aes-256-cbc -K $ENCRYPTED_KEY -iv $ENCRYPTED_IV -in ../dep_key.enc -out dep_key -d
-
-# git branch
-# git status
-# git show-ref
-
-# chmod 600 dep_key
-# eval `ssh-agent -s`
-# ssh-add dep_key
-
-# # # Now that we're all set up, we can push.
-# git push -fq $SSH_REPO $TARGET_BRANCH 
+git push -fq $SSH_REPO $TARGET_BRANCH 
