@@ -23,15 +23,6 @@ export default function () {
   this.passthrough('/quiz-sheets/:quiz_sheet_id')
 
   this.passthrough('/digital-fingerprints')
-
-  this.post('/languages', postLanguage)
-
-  this.post('/statements', postStatement)
-
-  this.post('/digital-fingerprints', function (db, request) {
-    return Ember.run.bind(this, postDigitalFingerprint)(db, request)
-  })
-
 }
 
 export function testConfig() {
