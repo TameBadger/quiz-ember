@@ -53,6 +53,12 @@ git branch
 git show-ref
 echo "==="
 
+cd ..
+echo "Moved back to main directory"
+git branch
+git show-ref
+echo "==="
+
 echo "Ember build started"
 ember build -prod
 cp dist/index.html out/
