@@ -7,25 +7,50 @@ moduleForComponent('quiz-item', 'Integration | Component | quiz item', {
   integration: true
 })
 
-test('it renders', function (assert) {
-
-  // Handle any actions with this.on('myAction', function(val) { ... });
-
-  // assert.expect(2)
+test('renders title correctly', function (assert) {
 
   const statement = { title: 'I hug someone I love.' }
-  const statementAnswerSelected = { id: 1 }
-  const statementAnswerNotSelected = { id: 2 }
+
+  const answer = { id: 1 }
 
   this.set('statement', statement)
-  this.set('answer', statementAnswerSelected)
 
-  this.render(hbs`{{quiz-item statement=statement title=statement.title answer=statementAnswerSelected}}`)
+  this.set('answer', answer)
 
-  // assert.equal(this.$('.select-title').text().trim(), 'I hug someone I love.')
+  this.render(hbs`{{quiz-item statement=statement title=statement.title answer=answer}}`)
 
-  // assert.equal(this.$().attr('class'), 'ember-view quiz-item selected', 'quiz item not selected yet')
+  assert.equal(this.$('.select-title').text().trim(), 'I hug someone I love.', 'title renders')
 
-  assert.equal(1, 1)
+})
+
+test('renders as selected on correct answer provided', function (assert) {
+
+  const statement = { id: 1, title: 'I hug someone I love.' }
+
+  const answer = { id: 1 }
+
+  this.set('statement', statement)
+
+  this.set('answer', answer)
+
+  this.render(hbs`{{quiz-item statement=statement title=statement.title answer=answer}}`)
+
+  assert.equal(this.$('li').attr('class'), 'ember-view quiz-item selected', 'quiz item selected')
+
+})
+
+test('renders as selected on correct answer provided', function (assert) {
+
+  const statement = { id: 1, title: 'I hug someone I love.' }
+
+  const answer = { id: 2 }
+
+  this.set('statement', statement)
+
+  this.set('answer', answer)
+
+  this.render(hbs`{{quiz-item statement=statement title=statement.title answer=answer}}`)
+
+  assert.equal(this.$('li').attr('class'), 'ember-view quiz-item', 'quiz item not selected')
 
 })
