@@ -1,6 +1,8 @@
 import Ember from 'ember'
 
-const { Component, computed, run: { debounce } } = Ember
+const { Component, run: { debounce } } = Ember
+
+import computed from 'ember-computed'
 
 export default Component.extend({
 
