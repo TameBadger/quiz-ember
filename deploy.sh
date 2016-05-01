@@ -42,3 +42,6 @@ chmod 600 dep_key
 eval `ssh-agent -s`
 ssh-add dep_key
 git push -fq $SSH_REPO $TARGET_BRANCH
+echo "Pushed new build to gh-pages"
+rm dep_key
+echo "Deployment of new build to gh-pages done"
