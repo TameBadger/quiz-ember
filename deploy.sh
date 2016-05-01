@@ -37,11 +37,11 @@ ENCRYPTED_KEY_VAR="encrypted_${ENCRYPTION_LABEL}_key"
 ENCRYPTED_IV_VAR="encrypted_${ENCRYPTION_LABEL}_iv"
 ENCRYPTED_KEY=${!ENCRYPTED_KEY_VAR}
 ENCRYPTED_IV=${!ENCRYPTED_IV_VAR}
-openssl aes-256-cbc -K $ENCRYPTED_KEY -iv $ENCRYPTED_IV -in ../dep_key.enc -out dep_key -d
-chmod 600 dep_key
+openssl aes-256-cbc -K $ENCRYPTED_KEY -iv $ENCRYPTED_IV -in ../deploy_key.enc -out deploy_key -d
+chmod 600 deploy_key
 eval `ssh-agent -s`
-ssh-add dep_key
+ssh-add deploy_key
 git push -fq $SSH_REPO $TARGET_BRANCH
 echo "Pushed new build to gh-pages"
-rm dep_key
+rm deploy_key
 echo "Deployment of new build to gh-pages done"

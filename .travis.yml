@@ -13,6 +13,7 @@ install:
 - npm install
 - bower install
 script:
+- npm test
 - bash ./deploy.sh
 deploy:
   provider: s3
