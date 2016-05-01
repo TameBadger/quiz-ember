@@ -7,6 +7,11 @@ A simple app, where you can take a quiz based on a pair of statements on a topic
 You'll get a breakdown of the result on completing the quizz, and can access this result again later.
 I experimented with [device fingerprinting](https://en.wikipedia.org/wiki/Device_fingerprint), as a method of identifying a user and storing their results against their device fingerprint.
 
+Deployed at [github-pages](http://tamebadger.github.io/quiz-ember)
+Deployed at [s3-aws](http://quiz-ember.s3-website-us-east-1.amazonaws.com)
+
+IN PROGRESS: Deploying API @ heroku
+
 ## Ember CLI in a jiffy
 
 If you don't want to spend time following the installation instructions below. Go ahead and use the [docker image](https://hub.docker.com/r/danlynn/ember-cli/) for Ember CLI.
@@ -59,11 +64,22 @@ Specify what it takes to deploy your app.
   * [ember inspector for chrome](https://chrome.google.com/webstore/detail/ember-inspector/bmdblncegkenkacieihfhpjfppoconhi)
   * [ember inspector for firefox](https://addons.mozilla.org/en-US/firefox/addon/ember-inspector/)
 
+## Roadmap / In Progress
+* Wire up api after deployed on heroku
+
 ## Roadmap / TODOS
-* Fix failing acceptance tests related to posting a record to mirage.
 * Add a variation of the docker image that includes ESLint.
 * Implement settings menu for toggling auto-save.
 * Make the quiz topic more dynamic.
-* Add more tests.
 * Add [ember-cordova](https://github.com/isleofcode/ember-cordova).
 * Investigate [ember-cordova](https://github.com/isleofcode/ember-cordova) features for swapping platform specific templates/styles.
+
+## Roadmap / Ongoing
+* Add more tests
+
+## Roadmap / Stuck
+* Fix failing acceptance tests related to posting a record to mirage.
+  Stuck via [link](http://stackoverflow.com/questions/36954576/issue-loading-records-via-ember-cli-mirage-in-unit-test)
+
+## Roadmap / Done
+* Automatic deployment via Travis CI to github-pages and aws s3
