@@ -17,7 +17,7 @@ bower:
 
 server:
  <<: *defaults
- command: server --watcher polling
+ command: server -prod
  ports:
    - "4200:4200"
    - "35729:35729"

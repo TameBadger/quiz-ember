@@ -48,7 +48,7 @@ module.exports = function (environment) {
   if (environment === 'production') {
     ENV.baseURL = '/quiz-ember'
     ENV.locationType = 'hash'
-
+    ENV.APP.host = 'https://hidden-crag-24768.herokuapp.com'
   }
 
   return ENV
