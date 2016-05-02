@@ -12,7 +12,8 @@ module.exports = function(defaults) {
     },
     fingerprint: {
       exclude: ['.png']
-    }
+    },
+    origin: 'http://tamebadger.github.io/quiz-ember/'
   })
 
   app.import('bower_components/clientjs/src/client.min.js')
