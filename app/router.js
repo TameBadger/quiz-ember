@@ -16,7 +16,7 @@ Router.map(function () {
   this.route('lovelanguage', { path: '/lovelanguage/:language_id' })
   this.route('quizzes')
   this.route('fingerprints')
-  this.route('my-digital-fingerprint');
+  this.route('my-digital-fingerprint')
 })
 
 export default Router

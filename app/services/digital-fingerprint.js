@@ -2,7 +2,7 @@ import Ember from 'ember'
 
 const { Service, computed, inject: { service } } = Ember
 
-import clientjs from 'clientjs'
+import ClientJS from 'clientjs'
 import fingerprintjs2 from 'fingerprintjs2'
 
 export default Service.extend({
@@ -33,30 +33,34 @@ export default Service.extend({
       })
     })
 
-    this.set('clientjs',new ClientJS())
+    this.set('clientjs', new ClientJS())
 
     const clientjsFingerprint = this.get('clientjs').getFingerprint()
 
-    this.set('collectivePrints.clientjsbasic',clientjsFingerprint)
+    this.set('collectivePrints.clientjsbasic', clientjsFingerprint)
 
-    this.set('collectivePrintData.clientjs',this.get('clientjs').getBrowserData())
+    this.set('collectivePrintData.clientjs', this.get('clientjs').getBrowserData())
 
   },
 
-  os: computed('clientjs',function(){
+  os: computed('clientjs', function () {
     return this.get('clientjs').getOS()
   }),
 
-  browser: computed('clientjs',function(){
+  browser: computed('clientjs', function () {
     return this.get('clientjs').getBrowser()
   }),
 
-  os_picture: computed('clientjs',function(){
-    return 'assets/images/os/' + this.get('clientjs').getOS().toLowerCase() + '.png'
+  osPicture: computed('clientjs', function () {
+    return 'assets/images/os/' + this.get('clientjs')
+    .getOS()
+    .toLowerCase() + '.png'
   }),
 
-  browser_picture: computed('clientjs',function(){
-    return 'assets/images/browser/' + this.get('clientjs').getBrowser().toLowerCase() + '.png'
+  browserPicture: computed('clientjs', function () {
+    return 'assets/images/browser/' + this.get('clientjs')
+    .getBrowser()
+    .toLowerCase() + '.png'
   }),
 
   fingerprintjs2: null,
@@ -69,7 +73,7 @@ export default Service.extend({
 
   collectivePrintData: Ember.Object.create({}),
 
-  stringified: computed('collectivePrints.fingerprintjs2',function(){
+  stringified: computed('collectivePrints.fingerprintjs2', function () {
     return JSON.stringify(this.get('collectivePrints.fingerprintjs2'))
   })
 

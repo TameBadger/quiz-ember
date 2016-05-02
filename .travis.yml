@@ -14,7 +14,8 @@ install:
 - bower install
 script:
 - npm test
-- bash ./deploy.sh
+after_success:
+  - bash ./deploy.sh
 deploy:
   provider: s3
   access_key_id: $AWS_ACCESS_KEY_ID
