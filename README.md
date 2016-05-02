@@ -10,7 +10,12 @@ I experimented with [device fingerprinting](https://en.wikipedia.org/wiki/Device
 Deployed at [github-pages](http://tamebadger.github.io/quiz-ember)
 Deployed at [s3-aws](http://quiz-ember.s3-website-us-east-1.amazonaws.com)
 
-IN PROGRESS: Deploying API @ heroku
+Accompanying JSON API at [https://github.com/TameBadger/quiz-rails](https://github.com/TameBadger/quiz-rails)
+Deployed on [heroku](https://hidden-crag-24768.herokuapp.com)
+You can do some requests to retrieve 
+[statements](https://hidden-crag-24768.herokuapp.com/statements)
+[pairs](https://hidden-crag-24768.herokuapp.com/pairs)
+[languages](https://hidden-crag-24768.herokuapp.com/languages)
 
 ## Ember CLI in a jiffy
 
@@ -65,11 +70,11 @@ Specify what it takes to deploy your app.
   * [ember inspector for firefox](https://addons.mozilla.org/en-US/firefox/addon/ember-inspector/)
 
 ## Roadmap / In Progress
-* Wire up api after deployed on heroku
+* Implement settings menu for toggling auto-save.
 
 ## Roadmap / TODOS
 * Add a variation of the docker image that includes ESLint.
-* Implement settings menu for toggling auto-save.
+
 * Make the quiz topic more dynamic.
 * Add [ember-cordova](https://github.com/isleofcode/ember-cordova).
 * Investigate [ember-cordova](https://github.com/isleofcode/ember-cordova) features for swapping platform specific templates/styles.
@@ -83,3 +88,4 @@ Specify what it takes to deploy your app.
 
 ## Roadmap / Done
 * Automatic deployment via Travis CI to github-pages and aws s3
+* Wire up api after deployed on heroku
