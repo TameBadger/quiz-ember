@@ -9,6 +9,6 @@ export default Model.extend({
   title: attr('string'),
   description: attr('string'),
   image: computed('short', function () {
-    return 'assets/images/5ll_icon-' + this.get('short') + '.png'
+    return 'assets/images/love_languages/5ll_icon-' + this.get('short') + '.png'
   })
 })

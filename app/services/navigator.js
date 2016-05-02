@@ -27,6 +27,7 @@ export default Service.extend({
     'quiz.result': { backDisabled: false, backToRoute: 'quizzes', title: 'calculated' },
     'quiz.done': { backDisabled: false, backToRoute: 'quizzes', title: 'Quiz Result' },
     'lovelanguage': { backDisabled: false, backToRoute: 'previous', title: 'calculated' },
+    'my-digital-fingerprint': { backDisabled: false, backToRoute: 'previous', title: 'My Digital Fingerprint' },
     'quizzes': { backDisabled: false, backToRoute: 'index', title: 'Your Quizzes' },
     'fingerprints': { backDisabled: false, backToRoute: 'index', title: 'All Fingerprints' },
     'catch-error': { backDisabled: false, backToRoute: 'index', title: 'Quiz Me Error' },
