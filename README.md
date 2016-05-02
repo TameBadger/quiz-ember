@@ -8,14 +8,15 @@ You'll get a breakdown of the result on completing the quizz, and can access thi
 I experimented with [device fingerprinting](https://en.wikipedia.org/wiki/Device_fingerprint), as a method of identifying a user and storing their results against their device fingerprint.
 
 Deployed at [github-pages](http://tamebadger.github.io/quiz-ember)
-Deployed at [s3-aws](http://quiz-ember.s3-website-us-east-1.amazonaws.com)
+and [s3-aws](http://quiz-ember.s3-website-us-east-1.amazonaws.com)
 
 Accompanying JSON API at [https://github.com/TameBadger/quiz-rails](https://github.com/TameBadger/quiz-rails)
-Deployed on [heroku](https://hidden-crag-24768.herokuapp.com)
-You can do some requests to retrieve 
-[statements](https://hidden-crag-24768.herokuapp.com/statements)
-[pairs](https://hidden-crag-24768.herokuapp.com/pairs)
-[languages](https://hidden-crag-24768.herokuapp.com/languages)
+deployed at [heroku](https://hidden-crag-24768.herokuapp.com)
+
+You some requests you can try out
+* [statements](https://hidden-crag-24768.herokuapp.com/statements)
+* [pairs](https://hidden-crag-24768.herokuapp.com/pairs)
+* [languages](https://hidden-crag-24768.herokuapp.com/languages)
 
 ## Ember CLI in a jiffy
 
