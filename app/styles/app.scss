@@ -1,6 +1,6 @@
 @import 'reset';
 
-@import url(http://fonts.googleapis.com/css?family=Satisfy|Pathway+Gothic+One);
+// @import url(http://fonts.googleapis.com/css?family=Satisfy|Pathway+Gothic+One);
 
 $moodyBlue: #18293A;
 $bruisedBlue: #253A4D;
@@ -24,7 +24,7 @@ body {
 	@extend .flex-column;
 	min-height: 100vh;
 	nav {
-		//more in components/nav-bar.scss
+		// more in components/nav-bar.scss
     position: fixed;
     width: 100%;
 	}
