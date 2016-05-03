@@ -11,6 +11,7 @@
     "Faker": "~3.0.0",
     "es5-shim": "^4.0.5",
     "fingerprintjs2": "~1.1.4",
-    "clientjs": "~0.1.5"
+    "clientjs": "~0.1.5",
+    "bourbon": "4.2.6"
   }
 }

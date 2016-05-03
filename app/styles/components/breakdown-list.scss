@@ -1,6 +1,6 @@
 ul.breakdown-list{
 	margin-left: -10px;
-	flex: 1;
+	@include flex(1);
 	li{
 		transition: width 1s, height 1s, background-color 1s, transform 1s;
 	}

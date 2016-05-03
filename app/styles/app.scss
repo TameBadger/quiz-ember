@@ -1,3 +1,4 @@
+@import 'bourbon';
 @import 'reset';
 
 @import url(http://fonts.googleapis.com/css?family=Satisfy|Pathway+Gothic+One);
@@ -30,13 +31,12 @@ body {
 	}
 	section {
     @extend .flex-column;
-		flex: 1;
-    margin-top: 100px;
+		@include flex(1);
+    	margin-top: 100px;
 	}
 }
 
 @import 'utils';
-
 @import 'default';
 
 @import 'shared/menu-list';

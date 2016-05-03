@@ -3,5 +3,5 @@ p.quiz-title{
 	margin-top: 30px;
 }
 ul.quiz-list {
-	flex: 1;
+	@include flex(1);
 }

@@ -1,5 +1,5 @@
 div.new-container{
-	flex: 1;
+	@include flex(1);
 	margin-top: 50px;
 }
 

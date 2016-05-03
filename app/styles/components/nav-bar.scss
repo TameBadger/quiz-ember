@@ -17,7 +17,7 @@ nav {
 	}
 	div.bar {
 		@extend .flex-center-all;
-	    flex: 1;
+	    @include flex(1);
 	}
 	h1.nav-title {
 		text-transform: uppercase;
