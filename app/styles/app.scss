@@ -2,6 +2,7 @@
 @import 'reset';
 
 @import url(http://fonts.googleapis.com/css?family=Satisfy|Pathway+Gothic+One);
+@import url(https://fonts.googleapis.com/css?family=Roboto:300);
 
 $moodyBlue: #18293A;
 $bruisedBlue: #253A4D;
@@ -14,6 +15,7 @@ $faded-two: rgba(0,0,0,0.2);
 
 $pathWay: 'Pathway Gothic One', 'sans-serif';
 $satisfy: 'Satisfy', 'cursive';
+$roboto: 'Roboto';
 
 $dimension: 60px;
 
@@ -54,3 +56,4 @@ body {
 @import 'components/breakdown-list';
 @import 'components/breakdown-item';
 @import 'components/bottom-bar';
+@import 'components/fingerprint-detail';

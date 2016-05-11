@@ -1,5 +1,9 @@
-<ul>
-	{{#each stats as |group|}}
-		<li>{{group.detail.os.name}}|{{group.detail.browser.name}}:{{group.count}}</li>
-	{{/each}}
-</ul>
+{{#each stats as |group|}}
+	{{fingerprint-detail 
+		os=group.detail.os.name
+		browser=group.detail.browser.name 
+		fingerprint=group.fingerprint
+		count=group.count
+		imgSource=group.browserPicture
+	}}
+{{/each}}
