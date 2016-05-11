@@ -4,7 +4,7 @@ const { Route } = Ember
 
 export default Route.extend({
 
-  model(){
+  model() {
     return this.store.findAll('digital-fingerprint')
   }
 
