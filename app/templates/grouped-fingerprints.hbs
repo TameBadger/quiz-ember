@@ -1,0 +1,5 @@
+<ul>
+	{{#each stats as |group|}}
+		<li>{{group.detail.os.name}}|{{group.detail.browser.name}}:{{group.count}}</li>
+	{{/each}}
+</ul>
