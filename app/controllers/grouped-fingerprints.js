@@ -13,7 +13,7 @@ export default Controller.extend({
     return this.get('groups').map(g=> {
       g.detail = UAParser(g.items[0].get('ua'))
       g.count = g.items.length
-      if(g.detail && g.detail.browser && g.detail.os){
+      if (g.detail.browser.name && g.detail.os.name) {
         g.browserPicture = 'assets/images/browser/' + g.detail.browser.name.toLowerCase() + '.png'
         g.osPicture = 'assets/images/os/' + g.detail.os.name.toLowerCase() + '.png'
       }
