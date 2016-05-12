@@ -22,3 +22,7 @@
 .flex-wrap{
 	@include flex-wrap(wrap);
 }
+
+.below-1{
+	z-index: -1;
+}
