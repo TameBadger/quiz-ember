@@ -7,8 +7,13 @@
   </div>
   <div class="fingerprint__label">
     <p>{{fingerprint}}</p>
-    <p>Visits:{{count}}</p>
-    <p>{{os}}</p>
-    <p class="capital">{{browser}}</p>
+    <div class='flex-row'>
+      <div class='fingerprint__label'>
+        <p>Visits:{{count}}</p>
+        <p>{{os}}</p>
+        <p class="capital">{{browser}}</p>
+      </div>
+      <img class="os-image" src={{osImage}}>
+    </div>
   </div>
 </div>

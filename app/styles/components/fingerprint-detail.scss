@@ -53,7 +53,7 @@ $thumb-side: 240px;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    padding: 15px 10px;
+    // padding: 15px 10px;
   }
   &__label > p {
     padding: 2px;
@@ -63,6 +63,11 @@ $thumb-side: 240px;
     white-space: nowrap;
     overflow: hidden;
     text-overflow: ellipsis;
+  }
+  .os-image{
+    width: 50px;
+    height: 50px;
+    margin-left: -50px;
   }
 }
 .capital {
