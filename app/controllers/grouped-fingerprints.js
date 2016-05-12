@@ -15,12 +15,12 @@ export default Controller.extend({
       g.count = g.items.length
       if (g.detail.browser.name) {
         g.browserPicture = 'assets/images/browser/' + g.detail.browser.name.toLowerCase() + '.png'
-      }else{
+      } else {
         g.browserPicture = 'assets/images/browser/unrecognized.png'
       }
       if (g.detail.os.name) {
         g.osPicture = 'assets/images/os/' + g.detail.os.name.toLowerCase() + '.png'
-      }else{
+      } else {
         g.osPicture = 'assets/images/os/unrecognized.png'
       }
       g.fingerprint = g.value
