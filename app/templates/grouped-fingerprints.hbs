@@ -1,9 +1,11 @@
-{{#each stats as |group|}}
-	{{fingerprint-detail 
-		os=group.detail.os.name
-		browser=group.detail.browser.name 
-		fingerprint=group.fingerprint
-		count=group.count
-		imgSource=group.browserPicture
-	}}
-{{/each}}
+<div class='flex-center-all flex-wrap'>
+	{{#each stats as |group|}}
+		{{fingerprint-detail 
+			os=group.detail.os.name
+			browser=group.detail.browser.name 
+			fingerprint=group.fingerprint
+			count=group.count
+			imgSource=group.browserPicture
+		}}
+	{{/each}}
+</div>

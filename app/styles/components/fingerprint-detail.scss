@@ -12,13 +12,11 @@ $thumb-side: 240px;
 }
 
 .fingerprint {
+  margin: 20px;
   width: $thumb-side;
   margin-right: 20px;
   margin-bottom: 20px;
   background: $color-item-background;
-  &:last-child {
-    margin: 0;
-  }
   &__thumbnail {
     position: relative;
     width: $thumb-side;
