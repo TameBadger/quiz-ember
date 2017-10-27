@@ -1,6 +1,5 @@
-import Ember from 'ember'
-
-const { Component, run: { debounce } } = Ember
+import Component from '@ember/component'
+import { debounce } from '@ember/runloop'
 
 import computed from 'ember-computed'
 

@@ -1,9 +1,9 @@
 /* eslint no-undef: "off" */
 
-import Ember from 'ember'
-import groupBy from 'ember-group-by'
+import Controller from '@ember/controller'
 
-const { Controller, computed } = Ember
+import { computed } from '@ember/object'
+import groupBy from 'ember-group-by'
 
 export default Controller.extend({
 

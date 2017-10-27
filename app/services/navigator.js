@@ -1,8 +1,8 @@
 /* eslint quote-props: "off" */
 
-import Ember from 'ember'
+import Service from '@ember/service'
 
-const { Service, computed, observer } = Ember
+import { observer, computed } from '@ember/object'
 
 export default Service.extend({
 

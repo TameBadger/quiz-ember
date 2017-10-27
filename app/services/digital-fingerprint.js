@@ -1,6 +1,5 @@
-import Ember from 'ember'
-
-const { Service, computed, inject: { service } } = Ember
+import EmberObject, { computed } from '@ember/object'
+import Service, { inject as service } from '@ember/service'
 
 import ClientJS from 'clientjs'
 import fingerprintjs2 from 'fingerprintjs2'
@@ -69,9 +68,9 @@ export default Service.extend({
 
   currentPrintRecord: null,
 
-  collectivePrints: Ember.Object.create({}),
+  collectivePrints: EmberObject.create({}),
 
-  collectivePrintData: Ember.Object.create({}),
+  collectivePrintData: EmberObject.create({}),
 
   stringified: computed('collectivePrints.fingerprintjs2', function () {
     return JSON.stringify(this.get('collectivePrints.fingerprintjs2'))

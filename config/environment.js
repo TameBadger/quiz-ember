@@ -34,7 +34,10 @@ module.exports = function (environment) {
   }
 
   if (environment === 'development') {
-
+    ENV.APP.host = 'https://hidden-crag-24768.herokuapp.com'
+    ENV['ember-cli-mirage'] = {
+      enabled: false
+    }
   }
 
   if (environment === 'test') {

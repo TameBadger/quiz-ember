@@ -1,6 +1,7 @@
-import Ember from 'ember'
-
-const { Service, computed, A, inject: { service } } = Ember
+import { alias } from '@ember/object/computed'
+import { computed } from '@ember/object'
+import { A } from '@ember/array'
+import Service, { inject as service } from '@ember/service'
 
 export default Service.extend({
 
@@ -10,7 +11,7 @@ export default Service.extend({
 
   answers: A(),
 
-  languages: computed.alias('cache.languages'),
+  languages: alias('cache.languages'),
 
   scoresByOptions: computed('answers.[]', function () {
     return this.get('languages')

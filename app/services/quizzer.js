@@ -1,6 +1,8 @@
-import Ember from 'ember'
-
-const { Service, computed, A, run: { later }, inject: { service } } = Ember
+import { alias } from '@ember/object/computed'
+import { computed } from '@ember/object'
+import { A } from '@ember/array'
+import { later } from '@ember/runloop'
+import Service, { inject as service } from '@ember/service'
 
 export default Service.extend({
 
@@ -10,9 +12,9 @@ export default Service.extend({
 
   settings: service(),
 
-  languages: computed.alias('cache.languages'),
+  languages: alias('cache.languages'),
 
-  pairs: computed.alias('cache.pairs'),
+  pairs: alias('cache.pairs'),
 
   currentQuestion: null,
 

@@ -1,6 +1,6 @@
-import Ember from 'ember'
-
-const { Service, A, inject: { service } } = Ember
+import EmberObject from '@ember/object'
+import { A } from '@ember/array'
+import Service, { inject as service } from '@ember/service'
 
 export default Service.extend({
 
@@ -14,7 +14,7 @@ export default Service.extend({
   statements: A(),
 
   loadFakeStatement() {
-    this.get('statements').addObject(Ember.Object.create({
+    this.get('statements').addObject(EmberObject.create({
       title: 'Statement 1',
       option: 'A'
     }))

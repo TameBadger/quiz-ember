@@ -1,10 +1,10 @@
 /* eslint newline-per-chained-call: "off", no-trailing-spaces: "off", no-magic-numbers: "off" */
 
+import Service from '@ember/service'
+
 import { moduleForComponent, test } from 'ember-qunit'
 import hbs from 'htmlbars-inline-precompile'
 
-import Ember from 'ember'
-const { Service } = Ember
 const locationStub = Service.extend({
   backDisabled: true,
   title: 'Quizlet'

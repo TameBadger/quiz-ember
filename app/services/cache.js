@@ -1,6 +1,6 @@
-import Ember from 'ember'
-
-const { Service, A, RSVP: { hash }, inject: { service } } = Ember
+import { A } from '@ember/array'
+import { hash } from 'rsvp'
+import Service, { inject as service } from '@ember/service'
 
 export default Service.extend({
 
