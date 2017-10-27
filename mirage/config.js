@@ -1,8 +1,12 @@
 /* eslint no-console: "off" */
 
-import Ember from 'ember'
+import { bind } from '@ember/runloop'
 
-import { postDigitalFingerprint, postLanguage, postStatement } from './methods/post'
+import {
+  postDigitalFingerprint,
+  postLanguage,
+  postStatement
+} from './methods/post'
 import { pair, language, statement } from './methods/get_single'
 import { pairs, languages, statements } from './methods/get_all'
 
@@ -46,7 +50,7 @@ export function testConfig() {
   this.post('/statements', postStatement)
 
   this.post('/digital-fingerprints', function (db, request) {
-    return Ember.run.bind(this, postDigitalFingerprint)(db, request)
+    return bind(this, postDigitalFingerprint)(db, request)
   })
 
 }
