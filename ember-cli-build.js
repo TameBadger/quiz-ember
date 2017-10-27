@@ -15,6 +15,12 @@ module.exports = function(defaults) {
     },
     SRI: {
       enabled: false
+    },
+    eslint: {
+      testGenerator: 'qunit',
+      group: true,
+      rulesDir: 'eslint-rules',
+      extensions: ['js']
     }
   })
 

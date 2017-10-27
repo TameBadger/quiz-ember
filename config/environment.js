@@ -8,7 +8,7 @@ module.exports = function (environment) {
 
     environment: environment,
 
-    baseURL: '/',
+    rootUrl: '/',
 
     locationType: 'auto',
 
@@ -38,7 +38,7 @@ module.exports = function (environment) {
   }
 
   if (environment === 'test') {
-    ENV.baseURL = '/'
+    ENV.rootUrl = '/'
     ENV.locationType = 'none'
     ENV.APP.LOG_ACTIVE_GENERATION = false
     ENV.APP.LOG_VIEW_LOOKUPS = false
@@ -46,7 +46,7 @@ module.exports = function (environment) {
   }
 
   if (environment === 'production') {
-    ENV.baseURL = '/quiz-ember'
+    ENV.rootUrl = '/quiz-ember'
     ENV.locationType = 'hash'
     ENV.APP.host = 'https://hidden-crag-24768.herokuapp.com'
   }
