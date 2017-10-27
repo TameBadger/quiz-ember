@@ -14,18 +14,18 @@ export default Service.extend({
 
   scoresByOptions: computed('answers.[]', function () {
     return this.get('languages')
-    .map(language=> {
-      return {
-        language: language,
-        option: language.get('option'),
-        title: language.get('title'),
-        score: this.get('answers')
-                  .filterBy('option', language.get('option'))
-                  .get('length')
-      }
-    })
-    .sortBy('score')
-    .reverse()
+      .map(language=> {
+        return {
+          language: language,
+          option: language.get('option'),
+          title: language.get('title'),
+          score: this.get('answers')
+            .filterBy('option', language.get('option'))
+            .get('length')
+        }
+      })
+      .sortBy('score')
+      .reverse()
   }),
 
   maxScore: computed('answers.[]', function () {
@@ -34,12 +34,12 @@ export default Service.extend({
 
   setup(model) {
     this.get('store')
-    .query('pair-answer', { sheet: model.get('id') })
-    .then(pairs=> {
-      pairs.filterBy('sheet.id', model.get('id')).forEach(pair=> {
-        this.get('answers').addObject(pair.get('answer'))
+      .query('pair-answer', { sheet: model.get('id') })
+      .then(pairs=> {
+        pairs.filterBy('sheet.id', model.get('id')).forEach(pair=> {
+          this.get('answers').addObject(pair.get('answer'))
+        })
       })
-    })
   },
 
   clear() {

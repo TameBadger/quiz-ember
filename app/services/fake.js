@@ -22,10 +22,10 @@ export default Service.extend({
 
   loadRealStatements() {
     this.get('store')
-    .findAll('statement')
-    .then(statements=> {
-      this.get('statements').addObjects(statements)
-    })
+      .findAll('statement')
+      .then(statements=> {
+        this.get('statements').addObjects(statements)
+      })
   },
 
   createRealStatement() {

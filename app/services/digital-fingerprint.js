@@ -22,15 +22,15 @@ export default Service.extend({
       this.set('collectivePrintData.fingerprintjs2', data)
 
       this.get('store')
-      .createRecord('digital-fingerprint', {
-        fingerprint: hash,
-        ua: data.find(x=> x.key === 'user_agent').value,
-        action: 'entered_app'
-      })
-      .save()
-      .then(record=> {
-        this.set('currentPrintRecord', record)
-      })
+        .createRecord('digital-fingerprint', {
+          fingerprint: hash,
+          ua: data.find(x=> x.key === 'user_agent').value,
+          action: 'entered_app'
+        })
+        .save()
+        .then(record=> {
+          this.set('currentPrintRecord', record)
+        })
     })
 
     this.set('clientjs', new ClientJS())
@@ -53,14 +53,14 @@ export default Service.extend({
 
   osPicture: computed('clientjs', function () {
     return 'assets/images/os/' + this.get('clientjs')
-    .getOS()
-    .toLowerCase() + '.png'
+      .getOS()
+      .toLowerCase() + '.png'
   }),
 
   browserPicture: computed('clientjs', function () {
     return 'assets/images/browser/' + this.get('clientjs')
-    .getBrowser()
-    .toLowerCase() + '.png'
+      .getBrowser()
+      .toLowerCase() + '.png'
   }),
 
   fingerprintjs2: null,

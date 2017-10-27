@@ -27,12 +27,12 @@ export default Service.extend({
         option: language.get('option'),
         title: language.get('title'),
         score: this.get('answers')
-                .filterBy('option', language.get('option'))
-                .get('length')
+          .filterBy('option', language.get('option'))
+          .get('length')
       }
     })
-    .sortBy('score')
-    .reverse()
+      .sortBy('score')
+      .reverse()
   }),
 
   maxScore: computed('answers', function () {
@@ -57,12 +57,12 @@ export default Service.extend({
 
   savePairAnswer() {
     return this.get('store')
-    .createRecord('pair-answer', {
-      pair: this.get('currentQuestion'),
-      answer: this.get('answer'),
-      sheet: this.get('currentSheet')
-    })
-    .save()
+      .createRecord('pair-answer', {
+        pair: this.get('currentQuestion'),
+        answer: this.get('answer'),
+        sheet: this.get('currentSheet')
+      })
+      .save()
   },
 
   nextPair() {
