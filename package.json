@@ -45,6 +45,7 @@
     "ember-load-initializers": "^1.0.0",
     "ember-multi-group-by": "0.0.8",
     "ember-resolver": "^4.5.0",
+    "ember-source": "~2.17.0-beta.3",
     "eslint-config-ember": "0.3.0",
     "loader.js": "^4.6.0"
   },
